@@ -1,0 +1,161 @@
+/*폰트*/
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*base*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+  --accent-color: #ff8607;
+  --text-color: #686868;
+  --background-color: white;
+}
+
+.body {
+    margin: 0;
+    font-family: 'Pretendard-Regular';
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/*nav*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 10px 100px; 
+    padding-bottom:2px;
+    border-bottom: 0.5px solid #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(107, 107, 107, 0.25);
+    
+}
+
+.nav_logo {
+    display: flex;
+    color: var(--text-color);
+    align-items:center;
+}
+
+.logotxt{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+  
+.nav_menu li {
+    padding: 8px 16px;
+}
+  
+.nav_menu li:hover {
+    color: var(--background-color);
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
+  
+.nav_menu li a:hover {
+    color: var(--background-color);
+}
+
+
+
+/*공지사항 목록*/
+.container{
+  padding-top: 100px;
+  width: 950px;
+  margin: 0 auto;
+}
+
+ul.tabs{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  border-bottom: 0.5px solid #FFFFFF;
+  box-shadow: 0px 4px 4px -4px rgba(107, 107, 107, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+ul.tabs li{
+  background: none;
+  color: #222;
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+  
+}
+
+ul.tabs li.current{
+  background: transparent;
+  color: var(--accent-color);
+}
+
+.tab-content{
+  display: none;
+  background: transparent;
+  padding: 15px;
+}
+
+.tab-content.current{
+  display: inherit;
+}
+
+/*mobile ver*/
+
+@media (max-width: 850px) {
+    .menu1{
+        display: none;
+    }
+    
+
+}
+
+@media (max-width: 500px) {
+  .menu1{
+      display: none;
+  }
+  .container{
+    padding-top: 100px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  ul.tabs{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    border-bottom: 0.5px solid #FFFFFF;
+    box-shadow: 0px 4px 4px -4px rgba(107, 107, 107, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: smaller;
+  }
+  
+
+}
+
+
+
+
+  
+
+
