@@ -25,8 +25,8 @@
     <div class="container">
 
         <ul class="tabs">
-          <li class="tab-link current" data-tab="tab-1">일반공지</li>
-          <li class="tab-link" data-tab="tab-2">학사공지</li>
+          <li class="tab-link current" onclick="getTable()" data-tab="tab-1">일반공지</li>
+          <li class="tab-link" onclick="getTable2()"data-tab="tab-2">학사공지</li>
           <li class="tab-link" data-tab="tab-3">학과공지</li>
           <li class="tab-link" data-tab="tab-4">대학일자리센터</li>
           <li class="tab-link" data-tab="tab-5">역량관리시스템</li>
@@ -41,8 +41,19 @@
                     <input type="text" class="find" placeholder="찾을 내용을 입력하세요">
                     <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
                 </div>
-                
             </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- 동적 데이터 생성 -->
+                </tbody>
+            </table>
+
         </div>
         <div id="tab-2" class="tab-content">
             <div class="search">
@@ -54,6 +65,19 @@
                 </div>
                 
             </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody2">
+                    <!-- 동적 데이터 생성 -->
+                </tbody>
+            </table>
+            
         </div>
         <div id="tab-3" class="tab-content">
             <div class="search">
