@@ -13,7 +13,7 @@
 }
 
 :root {
-  --accent-color: #ff8607;
+  --accent-color: #ff7710;
   --text-color: #686868;
   --background-color: white;
 }
@@ -37,13 +37,13 @@ a {
     padding: 10px 100px; 
     padding-bottom:2px;
     border-bottom: 0.5px solid #FFFFFF;
-    box-shadow: 0px 2px 4px rgba(107, 107, 107, 0.25);
+    box-shadow: 0px 4px 6px -4px rgba(93, 93, 93, 0.25);
     
 }
 
 .nav_logo {
     display: flex;
-    color: var(--text-color);
+    color: #1c1b1a;
     align-items:center;
 }
 
@@ -95,10 +95,11 @@ ul.tabs{
 
 ul.tabs li{
   background: none;
-  color: #222;
+  color: var(--text-color);
   display: inline-block;
   padding: 10px 15px;
   cursor: pointer;
+  font-weight:bold;
   
 }
 
@@ -117,6 +118,47 @@ ul.tabs li.current{
   display: inherit;
 }
 
+/*검색창*/
+.search{
+  width: auto;
+  height: 34px;
+  display: flex;
+  float: right;
+  margin-top: 10px;
+}
+
+.search-box {
+width: auto;
+border: 1px solid #bbb;
+border-radius: 8px;
+padding: 10px;
+line-height: 0.5;
+}
+
+.find{
+  outline: none;
+  font-size: 14px;
+  border: none;
+}
+
+.search-box img{
+  width: 6%;
+  float: right;
+  
+}
+
+.search p{
+  padding: 8px 12px;
+  text-decoration: underline;
+  float: right;
+  font-size: 14px;
+}
+
+
+
+
+
+
 /*mobile ver*/
 
 @media (max-width: 850px) {
@@ -129,13 +171,15 @@ ul.tabs li.current{
 
 @media (max-width: 500px) {
   .menu1{
-      display: none;
+    display: none;
   }
+  
   .container{
-    padding-top: 100px;
-    width: 80%;
+    padding-top: 40px;
+    width: 90%;
     margin: 0 auto;
   }
+
   
   ul.tabs{
     margin: 0px;
@@ -148,8 +192,32 @@ ul.tabs li.current{
     align-items: center;
     flex-wrap: wrap;
     font-size: smaller;
+    
   }
-  
+
+  ul.tabs li{
+    background: none;
+    color: var(--text-color);
+    display: inline-block;
+    padding: 10px 3px;
+    cursor: pointer;
+    font-weight:bold;
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .search{
+    width: auto;
+    height: 34px;
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .search p{
+    display: none;
+  }
 
 }
 
