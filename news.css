@@ -173,7 +173,46 @@ td a{
 td a:hover {
   color: var(--accent-color);
 }
+td{
+  padding: 10px 10px;
+}
+.title-menu{
+  width: 50%;
+}
 
+/*페이지네이션*/
+.nav{
+  width:50%;
+  padding:10px 0;
+  margin:0 auto 10px;
+  /* background-color: #594b38; */
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav>i:hover{
+  /* color:#fff; */
+  cursor: pointer;
+}
+
+ol{
+  display:flex;
+  list-style-type: none;
+  justify-content: center;
+  padding:0 5px;
+}
+
+#numbers li a.active{
+  opacity: 1;
+  background: #ccc;
+  color:#333;
+}
+
+.page-num{
+  padding:5px 10px;
+  color:#000;
+  text-decoration: none;
+}
 
 
 
