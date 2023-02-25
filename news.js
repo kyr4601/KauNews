@@ -1,5 +1,7 @@
 $(document).ready(function(){
   
+  
+
   $('ul.tabs li').click(function(){
     var tab_id = $(this).attr('data-tab');
 
@@ -10,10 +12,27 @@ $(document).ready(function(){
     $("#"+tab_id).addClass('current');
   })
 
+  
+
   getTable();
+
+  $("#search").keyup(function(e){
+    if(e.keyCode == 13){
+      document.getElementById('pagenum').style.display = 'none'
+      var k = $(this).val();
+      $("#my-table>tbody>tr").hide();
+      var title = $("#my-table>tbody>tr>td:contains('"+k+"')");
+      $(title).parent().show();
+      console.log("서치 함수 실행");
+     }
+  });
+
+
     
   
   })
+
+
 
 function getPaging(){
   const rowsPerPage = 10; //한 페이지에 담을 개수
@@ -133,9 +152,9 @@ function getTable() {
 
    
   var param = { "datasets" : [
-    { "NAME" : "공지사항 제목1", "from" : "미래교육혁신원", "date" : "2023-01-23", "cnt" : 2234, "link": "https://lms.kau.ac.kr/login.php?errorcode=4" },
-    { "NAME" : "공지사항 제목2", "from" : "시설원", "date" : "2023-01-24", "cnt" : 123, "link": "https://lms.kau.ac.kr/login.php?errorcode=4"},
-    { "NAME" : "공지사항 제목3", "from" : "기타", "date" : "2023-01-25", "cnt" : 4523, "link": "https://lms.kau.ac.kr/login.php?errorcode=4" },
+    { "NAME" : "테스트1", "from" : "미래교육혁신원", "date" : "2023-01-23", "cnt" : 2234, "link": "https://lms.kau.ac.kr/login.php?errorcode=4" },
+    { "NAME" : "테스트2", "from" : "시설원", "date" : "2023-01-24", "cnt" : 123, "link": "https://lms.kau.ac.kr/login.php?errorcode=4"},
+    { "NAME" : "테스트3", "from" : "기타", "date" : "2023-01-25", "cnt" : 4523, "link": "https://lms.kau.ac.kr/login.php?errorcode=4" },
     { "NAME" : "공지사항 제목1", "from" : "미래교육혁신원", "date" : "2023-01-23", "cnt" : 2234, "link": "https://lms.kau.ac.kr/login.php?errorcode=4" },
     { "NAME" : "공지사항 제목2", "from" : "시설원", "date" : "2023-01-24", "cnt" : 123, "link": "https://lms.kau.ac.kr/login.php?errorcode=4"},
     { "NAME" : "공지사항 제목1", "from" : "미래교육혁신원", "date" : "2023-01-23", "cnt" : 2234, "link": "https://lms.kau.ac.kr/login.php?errorcode=4" },
@@ -217,5 +236,24 @@ function getTable2() {
   }
   
 }
+
+/*
+$(document).ready(function(){
+  $("#search").keyup(function(){
+    var k = $(this).val();
+    $("tableBody>tbody").hide();
+    var title = $("tableBody>tbody>tr>td:nth-child(7n+3):contains('"+k+"')");
+    $(title).parent().show();
+  })
+})
+
+function search(){
+    var k = $("#search").val();
+    $("#my-table>tbody>tr").hide();
+    var title = $("#my-table>tbody>tr>td:contains('"+k+"')");
+    $(title-menu).parent().show();
+    console.log("서치 함수 실행");
+  
+}*/
 
 
